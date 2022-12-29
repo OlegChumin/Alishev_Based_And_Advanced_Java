@@ -1,4 +1,4 @@
-package Advanced_Java;
+package Advanced_Java.Part_07_TestingWithJUnit_037_039;
 
 public class Part_037_TestCase {
     /**
