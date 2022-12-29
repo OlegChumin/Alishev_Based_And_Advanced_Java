@@ -26,5 +26,16 @@ public class Part_037_TestCase {
      * все тестовые методы должны быть public void
      * Аннотация @Test может использовать параметры expected (генерация исключения  и timeout - ожидаемое время работы
      * (не более)
+     *
+     * JUnit - class Assert
+     *
+     * assertTrue()
+     * assertFalse()
+     * assertEquals()
+     * assertArrayEquals()
+     * assertNoEquals()
+     * assertSame()
+     * assertNotSame()
+     * fail - гарантированное падение теста
      * */
 }
