@@ -29,6 +29,7 @@ public class Part_037_TestCase {
      *
      * JUnit - class Assert
      *
+     * static method from Assert
      * assertTrue()
      * assertFalse()
      * assertEquals()
@@ -36,6 +37,6 @@ public class Part_037_TestCase {
      * assertNoEquals()
      * assertSame()
      * assertNotSame()
-     * fail - гарантированное падение теста
+     * Assert.fail - гарантированное падение теста
      * */
 }
