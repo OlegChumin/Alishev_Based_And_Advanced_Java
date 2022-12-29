@@ -1,5 +1,6 @@
 import Advanced_Java.Part_07_TestingWithJUnit_037_039.Vector2D;
 import org.junit.Assert;
+import org.junit.Ignore;
 import org.junit.Test;
 
 public class Vector2DTest {
@@ -10,6 +11,7 @@ public class Vector2DTest {
         Assert.assertEquals(0, vector2D.length(), 1e-9); //1e-9 = 0.000 000 001
     }
 
+    @Ignore
     @Test
     public void newVectorShouldHaveZeroCheckLength() {
         Vector2D vector2D = new Vector2D(); // Action

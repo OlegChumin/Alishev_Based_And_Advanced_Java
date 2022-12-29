@@ -38,5 +38,9 @@ public class Part_037_TestCase {
      * assertSame()
      * assertNotSame()
      * Assert.fail - гарантированное падение теста
+     *
+     * Assume.assumeFalse,
+     * Assume.assumeEquals
+     * Если проверка верна - тест пройдет, иначе тест игнорируется
      * */
 }
