@@ -42,5 +42,7 @@ public class Part_037_TestCase {
      * Assume.assumeFalse,
      * Assume.assumeEquals
      * Если проверка верна - тест пройдет, иначе тест игнорируется
+     *
+     *
      * */
 }
