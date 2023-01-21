@@ -33,6 +33,29 @@ public class AnnotationsLesson {
         System.out.println();
     }
 
+    /**
+     Аннотация @SuppressWarnings используется для подавления предупреждений компилятора. Например,
+     @SuppressWarnings("unchecked") отключает  предупреждения, связанные с "сырыми" типами (Raw Types).
+     public void testSuppressWarning() {
+     Map testMap = new HashMap();
+     testMap.put(1, "Item_1");
+     testMap.put(2, "Item_2");
+     testMap.put(3, "Item_3");
+     }
+     Если мы запустим компиляцию из командной строки с параметром -Xlint:unchecked, то получим следующее сообщение:
+     javac -Xlint:unchecked ./com/reflectoring/SuppressWarningsDemo.java
+     Warning:
+     unchecked call to put(K,V) as a member of the raw type Map
+     Чтобы этот код компилировался без предупреждений измените строку:
+     Map testMap = new HashMap(); на Map<Integer, String> testMap = new HashMap<>();
+     Если подобного легаси кода много, то вы вряд ли захотите вносить изменения, поскольку это влечет за собой много
+     регрессионного тестирования. В этом случае к классу можно добавить аннотацию @SuppressWarning, чтобы логи не
+     загромождались избыточными предупреждениями.
+     @SuppressWarnings({"rawtypes", "unchecked"})
+     public class SuppressWarningsDemo {
+     ...
+     } Теперь при компиляции предупреждений не будет.
+     */
     @SuppressWarnings("unchecked") //Indicates that the named compiler warnings should be suppressed in the annotated element
     public static void someMethod() {
         System.out.println();
