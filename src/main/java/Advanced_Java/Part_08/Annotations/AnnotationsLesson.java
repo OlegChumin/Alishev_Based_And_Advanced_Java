@@ -1,8 +1,16 @@
 package Advanced_Java.Part_08.Annotations;
 
+//https://habr.com/ru/company/otus/blog/655239/
+
+import java.util.List;
+
 /**
  Аннотация @SuppressWarnings используется для подавления предупреждений компилятора. Например, @SuppressWarnings
  ("unchecked") отключает предупреждения, связанные с "сырыми" типами (Raw Types).
+
+ Аннотация @FunctionalInterface используется для указания того, что в интерфейсе не может быть более одного абстрактного
+ метода. Если абстрактных методов будет больше одного, то компилятор выдаст ошибку. Функциональные интерфейсы появились
+ в Java 8 для реализации лямбда-выражений и гарантии того, что в них не более одного абстрактного метода.
  */
 @MyAnnotation
 public class AnnotationsLesson {
@@ -82,8 +90,21 @@ public class AnnotationsLesson {
      * private void printStringSafeVarargs(List<String>... testStringLists) {...}
      */
     @SafeVarargs
-    public void method(Integer x, String... str) {
+    private final void printStringSafeVarargs(List<String>... testStringLists) {
+        for (List<String> testStringList : testStringLists) {
+            for (String testString : testStringList) {
+                System.out.println(testString);
+            }
+        }
+    }
+    private void printString(String test1, String test2) {
+        System.out.println(test1);
+        System.out.println(test2);}
 
+    private void printStringVarargs(String... tests) {
+        for (String test : tests) {
+            System.out.println(test);
+        }
     }
 }
 
