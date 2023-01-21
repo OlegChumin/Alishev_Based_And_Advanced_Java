@@ -1,5 +1,7 @@
 package Advanced_Java.Part_08.Annotations;
 
+import static java.lang.annotation.ElementType.METHOD;
+
 /**
  Аннотация @SuppressWarnings используется для подавления предупреждений компилятора. Например, @SuppressWarnings
  ("unchecked") отключает предупреждения, связанные с "сырыми" типами (Raw Types).
@@ -29,7 +31,19 @@ public class AnnotationsLesson {
     }
 
     @Deprecated
-    public void someOldMethod() {
+    public static void someOldMethod() {
         System.out.println();
     }
+
+    @SuppressWarnings({}) //Indicates that the named compiler warnings should be suppressed in the annotated element
+    public static void someMethod() {
+        System.out.println();
+    }
+}
+
+class SomeClass {
+    public static void main(String[] args) {
+        AnnotationsLesson.someOldMethod(); //Deprecated
+    }
+
 }
