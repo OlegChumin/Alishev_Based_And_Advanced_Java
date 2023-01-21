@@ -27,4 +27,9 @@ public class AnnotationsLesson {
     @MyAnnotation
     public static void main(@MyAnnotation String[] args) {
     }
+
+    @Deprecated
+    public void someOldMethod() {
+        System.out.println();
+    }
 }
