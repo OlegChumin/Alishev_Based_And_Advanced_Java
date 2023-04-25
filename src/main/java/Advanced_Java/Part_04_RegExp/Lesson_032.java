@@ -18,5 +18,11 @@ public class Lesson_032 {
         String regex3 = "\\d+";
         String[] words3 = str3.split(regex3);
         System.out.println(Arrays.toString(words3));
+
+        String str4 = new String("Hello there hey");
+        String fromStr4 = str4.replace(" ", ".");
+        System.out.println(fromStr4);
+        String fromStr4_2 = str4.replace(" ", "::");
+        System.out.println(fromStr4_2);
     }
 }
