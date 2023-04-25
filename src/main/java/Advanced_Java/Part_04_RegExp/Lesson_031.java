@@ -19,6 +19,9 @@ public class Lesson_031 {
          [abc] == (a|b|c)
          [cdef] == (c|d|e|f)
          [0-9] == \\d  - одна цифра, любая из 0..9
+
+         [^abc] - ^ означает отрицание символы фис не должны быть в конечнмо множестве, т.е.
+         все символы проме а, b и c
          * */
 
         String str1 = "1";
@@ -73,6 +76,11 @@ public class Lesson_031 {
         String str18 = "333Rsd3311133111fTg1354251"; //
         String regex6 = "[a-zA-Z31]+\\d+";
         System.out.println("str18=" + str18 + " matches(regex6=" + regex6 +") == " + str18.matches(regex6)); //true
+        System.out.println();
+
+        String str19 = "hello"; //
+        String regex7 = "[^abc]*"; // означает все символы 0 или более, но кроме a b и с
+        System.out.println("str19=" + str19 + " matches(regex7=" + regex7 +") == " + str19.matches(regex7)); //true
         System.out.println();
     }
 }
