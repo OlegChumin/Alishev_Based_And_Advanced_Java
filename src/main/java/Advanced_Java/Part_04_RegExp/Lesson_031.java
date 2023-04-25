@@ -22,6 +22,13 @@ public class Lesson_031 {
 
          [^abc] - ^ означает отрицание символы фис не должны быть в конечнмо множестве, т.е.
          все символы проме а, b и c
+
+         . -> любой символ
+
+         {2} - два символа до "\d{2}"
+         {2, } - два или более символов
+         {2, ?} -> некорректно, {2, .} -> некорректно {2, *} - строки начинаются с а затем два или более символа b
+         {2, 4} - от 2 до четырех символов квантификатор должен указаывтаь на количество симвоблов
          * */
 
         String str1 = "1";
@@ -81,6 +88,11 @@ public class Lesson_031 {
         String str19 = "hello"; //
         String regex7 = "[^abc]*"; // означает все символы 0 или более, но кроме a b и с
         System.out.println("str19=" + str19 + " matches(regex7=" + regex7 +") == " + str19.matches(regex7)); //true
+        System.out.println();
+
+        String url = "https://www.google.tr"; //проверка на соответствие адреса URL
+        String regexURL = "htt(p|ps)://www\\..+\\.(com|ru|de|tr|au|net|io)"; // либо http|https + //www.имя сайта. домен
+        System.out.println("url=" + url + " matches(regexURL" + regexURL +") == " + url.matches(regexURL)); //true
         System.out.println();
     }
 }
