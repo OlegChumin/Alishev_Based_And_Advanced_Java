@@ -13,7 +13,7 @@ public class Lesson_031 {
          \\d - одна цифра
          \\w - одна буква
          "\s" - соответствует любому символу пробела, включая пробелы, табуляции и переводы строк
-         "\" - соответствует символу обратной косой черты
+         "\" - соответствует символу обратной косой черты напримр \\$
          + -> 1 или более
          * -> 0 или более
          ? -> 0 или 1 символов до (может быть, а может и не быть)
@@ -108,5 +108,11 @@ public class Lesson_031 {
         String strHashtag = "#hasgtag/";
         String regexHashtag = "^#.{1,64}/$"; // строка начинается с # далее любые символы от 1 до 64 и заканчивается /
         System.out.println("strHashtag=" + strHashtag + " matches(regex" + regexHashtag +") == " + strHashtag.matches(regexHashtag)); //true
+
+        String regex1 = "^\\$.+/$";
+        String input1 = "$Hello, world!/";
+        String input2 = "$Hello, world!";
+        System.out.println(input1.matches(regex1)); // true есть ода символа $ в начале строки и / в конце
+        System.out.println(input2.matches(regex1)); // false нет символа /
     }
 }
