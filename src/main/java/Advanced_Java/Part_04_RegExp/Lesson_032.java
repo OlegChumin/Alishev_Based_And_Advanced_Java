@@ -24,5 +24,8 @@ public class Lesson_032 {
         System.out.println(fromStr4);
         String fromStr4_2 = str4.replace(" ", "::");
         System.out.println(fromStr4_2);
+
+        String fromStr3 = str3.replaceAll("\\d+", " ");
+        System.out.println(fromStr3);
     }
 }
