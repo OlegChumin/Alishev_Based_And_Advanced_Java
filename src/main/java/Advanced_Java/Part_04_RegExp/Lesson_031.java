@@ -55,13 +55,24 @@ public class Lesson_031 {
         String str14 = "-41241";
         String str15 = "+41241";
         String regex3 = new String("(-|\\+|)?\\d+");
-        System.out.println("str13=" + str13 + " matches(regex3" + regex3 +") == " + str13.matches(regex3)); //true
-        System.out.println("str14=" + str14 + " matches(regex3" + regex3 +") == " + str14.matches(regex3)); //true
-        System.out.println("str15=" + str15 + " matches(regex3" + regex3 +") == " + str15.matches(regex3)); //true
+        System.out.println("str13=" + str13 + " matches(regex3=" + regex3 +") == " + str13.matches(regex3)); //true
+        System.out.println("str14=" + str14 + " matches(regex3=" + regex3 +") == " + str14.matches(regex3)); //true
+        System.out.println("str15=" + str15 + " matches(regex3=" + regex3 +") == " + str15.matches(regex3)); //true
         System.out.println();
 
         String str16 = "g1354251"; // вариант (a|b|c|d....) - неудобно
         String regex4 = "[a-zA-Z]\\d+";
+        System.out.println("str16=" + str16 + " matches(regex4=" + regex4 +") == " + str16.matches(regex4)); //true
+        System.out.println();
 
+        String str17 = "RsdfTg1354251"; //
+        String regex5 = "[a-zA-Z]+\\d+";
+        System.out.println("str17=" + str17 + " matches(regex5=" + regex5 +") == " + str17.matches(regex5)); //true
+        System.out.println();
+
+        String str18 = "333Rsd3311133111fTg1354251"; //
+        String regex6 = "[a-zA-Z31]+\\d+";
+        System.out.println("str18=" + str18 + " matches(regex6=" + regex6 +") == " + str18.matches(regex6)); //true
+        System.out.println();
     }
 }
