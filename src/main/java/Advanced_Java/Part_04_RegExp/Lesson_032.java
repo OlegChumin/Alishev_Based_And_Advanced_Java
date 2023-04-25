@@ -27,5 +27,7 @@ public class Lesson_032 {
 
         String fromStr3 = str3.replaceAll("\\d+", " ");
         System.out.println(fromStr3);
+        String fromStr3_2 = str3.replaceFirst("\\d+", " ");
+        System.out.println(fromStr3_2);
     }
 }
