@@ -104,7 +104,7 @@ public class Lesson_031 {
         System.out.println("strTest=" + strTest + " matches(regex" + regex +") == " + strTest.matches(regex)); //true
 
         String strHashtag = "#hasgtag/";
-        String regexHashtag = "^#.{1,64}/$";
+        String regexHashtag = "^#.{1,64}/$"; // строка начинается с # далее любые символы от 1 до 64 и заканчивается /
         System.out.println("strHashtag=" + strHashtag + " matches(regex" + regexHashtag +") == " + strHashtag.matches(regexHashtag)); //true
     }
 }
