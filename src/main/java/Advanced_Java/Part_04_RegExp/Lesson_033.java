@@ -1,5 +1,7 @@
 package Advanced_Java.Part_04_RegExp;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import java.util.regex.PatternSyntaxException;
@@ -60,5 +62,28 @@ public class Lesson_033 {
          * В методе groupCount() возвращается количество групп, определенных в регулярном выражении. Если вы не
          * определяете группы в регулярном выражении, метод groupCount() всегда вернет 0.
          * */
+        List<String> group_1 = new ArrayList<>();
+        List<String> group_2 = new ArrayList<>();
+        List<String> group_3 = new ArrayList<>();
+
+        try {
+            Pattern eMail2 = Pattern.compile("(\\w+)@(\\w+)\\.([a-z0-9]{2,3})"); //(group_1)@(group_2).(group_3)
+            Matcher matcher = eMail2.matcher(text);
+            while (matcher.find()) {
+                group_1.add(matcher.group(1));
+                group_2.add(matcher.group(2));
+                group_3.add(matcher.group(3));
+            }
+        } catch (PatternSyntaxException patternSyntaxException) {
+            // обработка ошибки компиляции регулярного выражения
+            patternSyntaxException.printStackTrace();
+        } catch (IllegalStateException illegalStateException) {
+            // обработка ошибки вызова метода find() в неправильном состоянии
+            illegalStateException.printStackTrace(); //Вызов метода printStackTrace() выводит полную трассировку стека
+            // исключения в консоль, что может помочь в диагностике ошибок и определении их причин.
+        }
+        System.out.println(group_1);
+        System.out.println(group_2);
+        System.out.println(group_3);
     }
 }
