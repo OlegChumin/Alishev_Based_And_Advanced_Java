@@ -41,6 +41,7 @@ public class Example {
      */
     @SuppressWarnings({"unused", "rawtypes"})
     public void anotherMethod() {
-        java.util.List myList = new java.util.ArrayList(); // в вызове типа List cслева нет указания типа - сырой тип
+        java.util.List myList = new java.util.ArrayList(); // в вызове типа List, cлева, нет указания типа - сырой тип
+        //java.util.List<String> myList = new java.util.ArrayList<>();
     }
 }
