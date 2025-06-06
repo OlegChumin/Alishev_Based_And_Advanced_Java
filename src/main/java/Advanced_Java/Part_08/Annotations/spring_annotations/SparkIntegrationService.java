@@ -1,10 +1,10 @@
 package Advanced_Java.Part_08.Annotations.spring_annotations;
 
-import lombok.RequiredArgsConstructor;
-import lombok.extern.slf4j.Slf4j;
-import org.springframework.beans.factory.annotation.Value;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
-import org.springframework.stereotype.Service;
+//import lombok.RequiredArgsConstructor;
+//import lombok.extern.slf4j.Slf4j;
+//import org.springframework.beans.factory.annotation.Value;
+//import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
+//import org.springframework.stereotype.Service;
 
 /**
  * @Slf4j (Lombok): Создает поле логгера в классе (log) для использования логирования (принадлежит к библиотеке
@@ -43,27 +43,27 @@ import org.springframework.stereotype.Service;
  * предупреждающего сообщения.
  */
 
-@Slf4j // 1
-@RequiredArgsConstructor // 2
-@Service // 3
-@ConditionalOnProperty(value = "feature-flag.spark-integration.unimock.enabled") // 4
-public class SparkIntegrationService {
-
-    private final SomeDependency someDependency; // 5
-
-    @Value("${feature-flag.spark-integration.unimock.url}") // 6
-    private String unimockUrl;
-
-    public void integrate() {
-        if (unimockUrl != null && !unimockUrl.isEmpty()) {
-            log.info("Integrating with UniMock at {}", unimockUrl); // 7
-            // Здесь будет логика интеграции
-        } else {
-            log.warn("UniMock URL is not configured."); // 8
-        }
-    }
-}
-
-class SomeDependency {
-
-}
+//@Slf4j // 1
+//@RequiredArgsConstructor // 2
+//@Service // 3
+//@ConditionalOnProperty(value = "feature-flag.spark-integration.unimock.enabled") // 4
+//public class SparkIntegrationService {
+//
+//    private final SomeDependency someDependency; // 5
+//
+//    @Value("${feature-flag.spark-integration.unimock.url}") // 6
+//    private String unimockUrl;
+//
+//    public void integrate() {
+//        if (unimockUrl != null && !unimockUrl.isEmpty()) {
+//            log.info("Integrating with UniMock at {}", unimockUrl); // 7
+//            // Здесь будет логика интеграции
+//        } else {
+//            log.warn("UniMock URL is not configured."); // 8
+//        }
+//    }
+//}
+//
+//class SomeDependency {
+//
+//}
