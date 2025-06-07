@@ -21,6 +21,15 @@ import java.util.concurrent.TimeUnit;
  * To start measuring benchmark: run BenchmarkRunner or in terminal (PowerShell)
  * mvn clean install
  * mvn exec:exec -Dexec.mainClass=org.openjdk.jmh.Main
+ *
+ * @BenchmarkMode(Mode.AverageTime) измеряется среднее время выполнения
+ * @OutputTimeUnit(TimeUnit.MILLISECONDS) единица измерения — миллисекунды
+ * @State(Scope.Thread) каждый поток бенчмарка использует собственный экземпляр класса
+ * ускорить
+ * @Warmup(iterations = 1, time = 2) прогрев: 1 итерация по 2 секунды
+ * @Measurement(iterations = 2, time = 2) измерения: 2 итерации по 2 секунды
+ * @Fork(1)   запускать один отдельный процесс JVM
+ * добавить к аннотациям класса
  */
 @BenchmarkMode(Mode.AverageTime)
 @OutputTimeUnit(TimeUnit.MILLISECONDS)
